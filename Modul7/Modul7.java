@@ -131,19 +131,41 @@ public class Modul7 extends JFrame {
             return;
         }
 
-        // Tentukan Grade (switch case)
-        String grade;
-        int kategori = nilai / 10;
+       String grade;
+int kategori = nilai / 10;
 
-        switch (kategori) {
-            case 8: grade = "A"; break;
-            case 7: grade = "AB"; break;
-            case 6: grade = "B"; break;
-            case 5: grade = "BC"; break;
-            case 4: grade = "C"; break;
-            case 3: grade = "D"; break;
-            default: grade = "E"; break;
-        }
+switch (kategori) {
+    case 10:
+    case 9:
+    case 8:
+        grade = "A";
+        break;
+
+    case 7:
+        grade = "AB";
+        break;
+
+    case 6:
+        grade = "B";
+        break;
+
+    case 5:
+        grade = "BC";
+        break;
+
+    case 4:
+        grade = "C";
+        break;
+
+    case 3:
+        grade = "D";
+        break;
+
+    default:
+        grade = "E";
+        break;
+}
+
 
         // Tambahkan ke tabel
         Object[] baris = {nama, matkul, nilai, grade};
